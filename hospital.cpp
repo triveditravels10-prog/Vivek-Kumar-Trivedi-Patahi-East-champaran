@@ -2,9 +2,6 @@
 using namespace std;
 
 int main() {
-    string patient;
-    cout << "Enter patient name: ";
-    cin >> patient;
-    cout << "Patient Registered: " << patient << endl;
+    cout << "Server Logic Simulation Running...";
     return 0;
 }
