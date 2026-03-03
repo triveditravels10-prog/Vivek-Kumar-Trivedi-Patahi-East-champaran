@@ -1,62 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-header {
-    background: #0a4d68;
+.hero {
+    background: linear-gradient(to right, #0a4d68, #088395);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     text-align: center;
-    padding: 20px;
 }
 
-nav {
-    background: #088395;
-    padding: 10px;
+.hero h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.section {
+    padding: 60px 20px;
     text-align: center;
 }
 
-nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
+.dark {
+    background: #f4f4f4;
 }
 
-section {
-    padding: 30px;
-}
-
-h2 {
+.section h2 {
+    margin-bottom: 20px;
     color: #0a4d68;
 }
 
 ul {
-    list-style: square;
+    list-style: none;
+    padding: 0;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+ul li {
+    padding: 8px;
 }
 
-table, th, td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-}
-
-.doctor-card {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-left: 5px solid #0a4d68;
+.photo-section img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
 }
 
 footer {
     background: #0a4d68;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
+}
+
+.ad {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
 }
