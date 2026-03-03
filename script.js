@@ -1,3 +1,13 @@
-console.log("Welcome to Trivedi Hospital Website");
+window.addEventListener("scroll", function() {
+    let reveals = document.querySelectorAll(".reveal");
 
-alert("Welcome to Trivedi Hospital - Patahi");
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+});
