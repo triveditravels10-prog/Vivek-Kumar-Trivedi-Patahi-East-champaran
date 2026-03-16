@@ -99,18 +99,27 @@ transform:scale(1.05);
 transition:0.3s;
     }
 
+
+
+    
 .typing{
+display:inline-block;
 overflow:hidden;
+border-right:3px solid black;
 white-space:nowrap;
-border-right:3px solid;
-width:0;
-animation:typing 4s steps(30,end) forwards;
+animation:typing 4s steps(40,end), blink .7s step-end infinite;
 }
 
 @keyframes typing{
 from{width:0}
 to{width:100%}
 }
+
+@keyframes blink{
+50%{border-color:transparent}
+}
+
+
     
     
 </style>
