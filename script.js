@@ -41,6 +41,41 @@ window.addEventListener('load', () => {
 
 
 
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  const slide = document.querySelector('.slide');
+  slide.style.opacity = 1;
+
+  const btn = document.getElementById('showMore');
+  const extra = document.getElementById('extraInfo');
+
+  if(btn && extra){
+    btn.addEventListener('click', () => {
+      extra.style.display = extra.style.display === 'none' ? 'block' : 'none';
+    });
+  }
+
+  const quotes = [
+    "Dream big, work hard!",
+    "Success comes to those who hustle.",
+    "Your only limit is your mind.",
+    "Be fearless in the pursuit of greatness.",
+    "Small steps every day lead to big results."
+  ];
+
+  const quoteEl = document.getElementById('quote');
+  if(quoteEl){
+    quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+  }
+});
+
+
+
+
+
+
 // Fade-in slide on load
 const slide = document.querySelector('.slide');
 window.addEventListener('load', () => {
