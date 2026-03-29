@@ -18,3 +18,21 @@ window.addEventListener("load", function(){
 });
 
 
+
+
+
+
+
+
+
+
+
+
+// Simple fade-in effect
+const slide = document.querySelector('.slide');
+slide.style.opacity = 0;
+
+window.addEventListener('load', () => {
+  slide.style.transition = 'opacity 1s';
+  slide.style.opacity = 1;
+});
