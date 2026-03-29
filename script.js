@@ -72,6 +72,15 @@ window.addEventListener('DOMContentLoaded', () => {
   if(quoteEl){
     quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
   }
+
+// ===== Sliding image left → right =====
+  const slideImage = document.querySelector('.slide-img img');
+  if(slideImage){
+    setTimeout(() => {
+      slideImage.style.left = '0'; // screen me slide in
+    }, 500); // 0.5s delay
+  }
+  
 });
 
 
