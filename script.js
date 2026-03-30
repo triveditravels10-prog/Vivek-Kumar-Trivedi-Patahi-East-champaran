@@ -25,9 +25,6 @@ window.addEventListener("load", function(){
 
 
 
-function toggleMode(){
-  document.body.classList.toggle("dark");
-}
 
 
 
