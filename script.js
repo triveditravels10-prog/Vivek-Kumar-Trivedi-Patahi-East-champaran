@@ -86,3 +86,30 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+window.addEventListener('load', () => {
+  const images = document.querySelectorAll('.slide-img img');
+  let current = 0;
+
+  // first image show
+  images[current].style.left = '0';
+  images[current].style.opacity = '1';
+
+  setInterval(() => {
+    // hide current
+    images[current].style.left = '-100%';
+    images[current].style.opacity = '0';
+
+    // next index
+    current = (current + 1) % images.length;
+
+    // show next
+    images[current].style.left = '0';
+    images[current].style.opacity = '1';
+
+  }, 3000);
+});
+
+
+
