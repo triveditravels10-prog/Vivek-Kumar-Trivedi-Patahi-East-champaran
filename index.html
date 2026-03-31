@@ -16,8 +16,7 @@
 
     
     
-</style>
-    
+
     
 </head>
 
@@ -51,6 +50,43 @@
         <p>CBSE Student | Self Learner | Technology Enthusiast</p>
     </div>
 </header>
+
+<!-- 🔥 FOCUS DASHBOARD START -->
+<section class="dashboard">
+
+  <h2>🔥 Focus Dashboard</h2>
+
+  <!-- TIMER -->
+  <div class="card">
+    <h3>Study Timer</h3>
+    <h1 id="timer">00:00:00</h1>
+
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+
+  <!-- TODAY PLAN -->
+  <div class="card">
+    <h3>Today's Plan</h3>
+
+    <input type="text" id="taskInput" placeholder="Enter task...">
+    <button onclick="addTask()">Add</button>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <!-- MOTIVATION -->
+  <div class="card">
+    <h3>Motivation</h3>
+    <p id="quote">Click below 👇</p>
+
+    <button onclick="showQuote()">Motivate Me</button>
+  </div>
+
+</section>
+<!-- 🔥 FOCUS DASHBOARD END -->
+    
 
 <section id="1" class="section">
     <h2>About Vivek Kumar Trivedi</h2>
