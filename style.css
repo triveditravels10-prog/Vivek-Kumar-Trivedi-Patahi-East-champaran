@@ -230,7 +230,47 @@ gap:15px;
   }
     
 
-    
+.dashboard{
+  padding:40px;
+  text-align:center;
+}
+
+.dashboard h2{
+  margin-bottom:20px;
+}
+
+.dashboard .card{
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius:15px;
+  padding:20px;
+  margin:20px auto;
+  max-width:300px;
+  color:white;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.dashboard button{
+  margin:5px;
+  padding:10px 15px;
+  border:none;
+  border-radius:8px;
+  background:#007bff;
+  color:white;
+  cursor:pointer;
+}
+
+.dashboard input{
+  padding:10px;
+  width:70%;
+  margin-top:10px;
+}
+
+
+
+
+
+
     
 
     
