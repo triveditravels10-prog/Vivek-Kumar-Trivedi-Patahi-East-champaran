@@ -22,29 +22,6 @@ window.addEventListener("load", function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 window.addEventListener('DOMContentLoaded', () => {
   // Slide fade-in
   const slide = document.querySelector('.slide');
@@ -112,3 +89,74 @@ window.addEventListener('load', () => {
 
 
 
+
+// 🔥 TIMER
+let time = 0;
+let running = false;
+let interval;
+
+function updateTimer(){
+  let hrs = Math.floor(time / 3600);
+  let mins = Math.floor((time % 3600) / 60);
+  let secs = time % 60;
+
+  document.getElementById("timer").innerText =
+    String(hrs).padStart(2,'0') + ":" +
+    String(mins).padStart(2,'0') + ":" +
+    String(secs).padStart(2,'0');
+}
+
+function startTimer(){
+  if(!running){
+    running = true;
+    interval = setInterval(() => {
+      time++;
+      updateTimer();
+    },1000);
+  }
+}
+
+function stopTimer(){
+  running = false;
+  clearInterval(interval);
+}
+
+function resetTimer(){
+  running = false;
+  clearInterval(interval);
+  time = 0;
+  updateTimer();
+}
+
+// 🔥 TASK LIST
+function addTask(){
+  let input = document.getElementById("taskInput");
+  let task = input.value;
+
+  if(task === "") return;
+
+  let li = document.createElement("li");
+  li.innerText = task;
+
+  li.onclick = function(){
+    li.style.textDecoration = "line-through";
+  }
+
+  document.getElementById("taskList").appendChild(li);
+
+  input.value = "";
+}
+
+// 🔥 MOTIVATION
+function showQuote(){
+  let quotes = [
+    "No one is coming. Build yourself.",
+    "Discipline beats motivation.",
+    "You vs You.",
+    "Focus now, flex later.",
+    "Pain of regret > pain of effort."
+  ];
+
+  let random = quotes[Math.floor(Math.random() * quotes.length)];
+  document.getElementById("quote").innerText = random;
+}
