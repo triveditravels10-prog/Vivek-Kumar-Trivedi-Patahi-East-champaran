@@ -160,3 +160,16 @@ function showQuote(){
   let random = quotes[Math.floor(Math.random() * quotes.length)];
   document.getElementById("quote").innerText = random;
 }
+
+
+
+function checkPin(){
+  let pin = document.getElementById("pinInput").value;
+
+  if(pin === "1234"){   // 👉 अपना PIN बदल लेना
+    document.getElementById("lockScreen").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
+  } else {
+    document.getElementById("error").innerText = "Wrong PIN!";
+  }
+}
