@@ -21,7 +21,17 @@
 </head>
 
 <body>
+    
+<div id="lockScreen">
+  <h2>🔒 Enter PIN</h2>
+  <input type="password" id="pinInput" placeholder="Enter PIN">
+  <button onclick="checkPin()">Unlock</button>
+  <p id="error"></p>
+</div>
 
+<div id="mainContent" style="display:none;">
+
+    
 <button onclick="toggleMode()">🌙</button>
 
 
@@ -286,7 +296,7 @@ View My Projects
   <p id="clock"></p>
 </div>
 
-    
+</div>
     
 <script src="script.js"></script>
 </body>
