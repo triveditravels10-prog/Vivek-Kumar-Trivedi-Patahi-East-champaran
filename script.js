@@ -240,3 +240,47 @@ const db = firebase.firestore();
 
 
 
+
+
+
+
+// 🔐 LOGIN
+function login(){
+  let provider = new firebase.auth.GoogleAuthProvider();
+  auth.signInWithPopup(provider)
+  .then(() => alert("Login Successful 🔥"))
+  .catch(err => alert(err.message));
+}
+
+// 🔓 LOGOUT
+function logout(){
+  auth.signOut();
+  alert("Logged out");
+}
+
+// 📝 POST ADD
+function addPost(){
+  let text = document.getElementById("postInput").value;
+
+  if(text !== ""){
+    db.collection("posts").add({
+      message: text,
+      time: Date.now()
+    });
+
+    document.getElementById("postInput").value = "";
+  }
+}
+
+// 📜 SHOW POSTS (LIVE)
+db.collection("posts").orderBy("time", "desc")
+.onSnapshot(snapshot => {
+  let feed = document.getElementById("feed");
+  feed.innerHTML = "";
+
+  snapshot.forEach(doc => {
+    let li = document.createElement("li");
+    li.innerText = doc.data().message;
+    feed.appendChild(li);
+  });
+});
