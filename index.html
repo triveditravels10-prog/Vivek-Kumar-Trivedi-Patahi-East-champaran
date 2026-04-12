@@ -22,17 +22,21 @@
 
 <body>
     
+<!-- 🔒 PIN SCREEN -->
 <div id="lockScreen">
-  <h2>🔒 Enter PIN</h2>
-  <input type="password" id="pinInput" placeholder="Enter PIN">
+  <h2>Enter PIN</h2>
+  <input type="password" id="pinInput">
   <button onclick="checkPin()">Unlock</button>
   <p id="error"></p>
 </div>
 
-<div id="mainContent" style="display:none;">
+<!-- 💻 LOADING SCREEN -->
+<div id="loaderScreen" style="display:none;">
+  <h2 id="typingText"></h2>
+</div>
 
-    
-<button onclick="toggleMode()">🌙</button>
+<!-- 🌐 MAIN WEBSITE -->
+<div id="mainContent" style="display:none;">
 
 
 
