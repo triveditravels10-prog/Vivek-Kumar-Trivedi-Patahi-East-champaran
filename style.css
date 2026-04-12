@@ -268,21 +268,31 @@ gap:15px;
 
 
 
-#lockScreen{
+
+    #lockScreen, #loaderScreen{
   position:fixed;
   top:0;
   left:0;
   width:100%;
   height:100%;
   background:black;
-  color:white;
+  color:lime;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  font-family:monospace;
 }
 
+#typingText::after{
+  content: "|";
+  animation: blink 1s infinite;
+}
 
-    
+@keyframes blink{
+  0%{opacity:1;}
+  50%{opacity:0;}
+  100%{opacity:1;}
+}
 
     
