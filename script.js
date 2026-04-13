@@ -284,3 +284,49 @@ db.collection("posts").orderBy("time", "desc")
     feed.appendChild(li);
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+function addPost(){
+  let text = document.getElementById("postInput").value;
+
+  if(text !== ""){
+    let posts = JSON.parse(localStorage.getItem("posts")) || [];
+    
+    posts.push(text);
+    localStorage.setItem("posts", JSON.stringify(posts));
+
+    showPosts();
+    document.getElementById("postInput").value = "";
+  }
+}
+
+function showPosts(){
+  let posts = JSON.parse(localStorage.getItem("posts")) || [];
+  let feed = document.getElementById("feed");
+
+  feed.innerHTML = "";
+
+  posts.reverse().forEach(p => {
+    let li = document.createElement("li");
+    li.innerText = p;
+    feed.appendChild(li);
+  });
+}
+
+// load on start
+showPosts();
+
+
+
+
+
