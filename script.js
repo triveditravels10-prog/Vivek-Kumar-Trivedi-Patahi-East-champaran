@@ -221,28 +221,6 @@ function typeEffect(){
 
 
 
-// 🔥 Firebase config
-const firebaseConfig = {
-  apiKey: "AIzaSyCu9pQYnkbGRTVN8798C3ilvrc6Z_EmrH0",
-  authDomain: "trivedi-8d263.firebaseapp.com",
-  projectId: "trivedi-8d263",
-  storageBucket: "trivedi-8d263.firebasestorage.app",
-  messagingSenderId: "531536403649",
-  appId: "1:531536403649:web:1a0f1d76856590eb0b8840"
-};
-
-// 🔥 Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-const auth = firebase.auth();
-const db = firebase.firestore();
-
-
-
-
-
-
-
 
 // 🔐 LOGIN
 function login(){
