@@ -298,9 +298,11 @@ font-size:34px;
 font-size:16px;
 }
 
-nav a{
-display:block;
-margin:12px 0;
+
+  nav a{
+display:inline-block;
+margin:8px;
+font-size:14px;
 }
 
 .photo-section{
