@@ -157,40 +157,40 @@ outline:none;
 }
 
 /* ---------- PHOTO SECTION ---------- */
+/* PHOTO SECTION FIX */
 
 .photo-section{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 justify-items:center;
 }
 
 .profile-pic{
-width:220px;
-height:280px;
+width:200px;
+height:250px;
 object-fit:cover;
 border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.4);
-transition:.3s;
 }
 
-.profile-pic:hover{
-transform:scale(1.05);
-}
-
-/* ---------- GALLERY ---------- */
+/* GALLERY FIX */
 
 .gallery{
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(200px,1fr));
+display:flex;
+overflow-x:auto;
 gap:15px;
+padding:10px;
+scroll-behavior:smooth;
 }
 
 .gallery img{
-width:100%;
-border-radius:12px;
+height:250px;
+width:auto;
+border-radius:10px;
+flex-shrink:0;
+background:#000;
 }
+
 
 /* ---------- SLIDER ---------- */
 
